@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--stylesheets-->
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">    
+    <title>Home</title>
+</head>
+<style>
+     /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #000000;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+    /** rating starts*/
+
+.rating-stars ul {
+    list-style-type:none;
+    padding:0;
+    
+    -moz-user-select:none;
+    -webkit-user-select:none;
+  }
+  .rating-stars ul > li.star {
+    display:inline-block;
+    
+  }
+  
+  /* Idle State of the stars */
+  .rating-stars ul > li.star > i.fas {
+    font-size:2.5em; /* Change the size of the stars */
+    color:#ccc; /* Color on idle state */
+  }
+  
+  /* Hover state of the stars */
+  .rating-stars ul > li.star.hover > i.fas {
+    color:#FFCC36;
+  }
+  
+  /* Selected state of the stars */
+  .rating-stars ul > li.star.selected > i.fas {
+    color:#120C6E;
+  }
+  
+</style>
+<body> <div id="app">
+
+    <header class="mt-2 sm:flex sm:justify-between sm:items-center">
+        <div class="flex items-center justify-between px-4 sm:px-0 py-3 md:w-1/3">
+                    <div class=" mx-auto sm:ml-8">
+                        <img class="h-10" src="img/logo.png" alt="werili">
+                    </div>
+                    <div class="sm:hidden">
+                        <button @click="isOpen = !isOpen" type="button" class="block text-blue">
+                            <i v-if="!isOpen" class="fas fa-bars fa-2x"></i>
+                            <i v-if="isOpen" class="fas fa-times fa-2x"></i>
+                        </button>
+                    </div>
+        </div>
+                            <div :class="isOpen ? 'block' : 'hidden' " class="px-6 py-3 sm:flex sm:items-center sm:mt-4 sm:w-1/3 mx-auto">
+                                <div class="mx-auto text-center sm:flex">
+                                    <a class="text-wblack pb-2 block font-medium font-rubik" href="">Catégories</a>
+                                    <a class="text-wblack mt-1 pb-2 block font-medium font-rubik sm:mt-0 sm:ml-4" href="">Business</a>
+                                    <a class="text-wblack mt-1 pb-2 block font-medium font-rubik sm:mt-0 sm:ml-4" href="">About</a>
+                                </div>
+                            </div>
+                                
+                        
+                                 
+                                <div :class="isOpen ? 'block' : 'hidden' " class="py-3 sm:flex sm:items-center sm:mt-2 mx-auto sm:mr-0 sm:w-1/3">
+<!--hna relta f iphone 6 paysage view--><button class="sm:mt-0 mt-6 bg-blue rounded-md px-8 py-3 text-white block font-rubik mx-auto sm:mr-8">Login</button> 
+                                </div>          
+    </header> <!--END HEADER-->
+
+            <div class="container h-screen mx-auto mt-20">
+                <div class="flex flex-wrap items-start">
+
+                        <div class="w-full lg:w-2/3 order-1 p-4">
+                            <h1 class="font-rubik text-3xl text-wblack">
+                                Pink panther pizza
+                            </h1> <!--Title-->
+                            <div class="flex flex-wrap w-full">
+                                <div class="w-full lg:w-1/2 order-2 lg:order-none p-4">
+                                    <img src="/img/cat/cafe.jpg" alt="">
+                                    <p class="font-rubik text-wblack mt-4 text-left block lg:hidden">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga accusamus, aspernatur, veniam tempora at adipisci atque, quo hic distinctio tempore autem commodi? Voluptatibus distinctio explicabo corrupti soluta eaque quo consequuntur!
+                                            Nulla ipsa, aut ea esse dicta illum sit incidunt fugit totam molestiae numquam quae ut! Nobis, quae molestias consequuntur non at ex itaque eaque! Fugit odit a repellat atque aspernatur?
+                                            Nihil necessitatibus saepe ut voluptas eaque est distinctio ex minima molestias? Quia consequatur asperiores, porro sequi tempora distinctio numquam molestiae, officiis voluptas consequuntur commodi, eaque unde accusantium hic rerum quis.
+                                    </p>
+                                </div> <!--Business image-->
+                                <div class="w-full lg:w-1/2 order-1 lg:order-none p-4 flex flex-wrap items-center">
+                                    <i class="fas fa-star fa-2x mr-2" style="color:#FFCC36" ></i>
+                                    <span class="font-rubik text-wblack text-2xl">4.3/5</span>
+                                    <span class="font-rubik text-grey text-sm ml-2">(10 reviews)</span>
+                                    <p class="font-rubik text-wblack mt-4 text-left hidden lg:block">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga accusamus, aspernatur, veniam tempora at adipisci atque, quo hic distinctio tempore autem commodi? Voluptatibus distinctio explicabo corrupti soluta eaque quo consequuntur!
+                                        Nulla ipsa, aut ea esse dicta illum sit incidunt fugit totam molestiae numquam quae ut! Nobis, quae molestias consequuntur non at ex itaque eaque! Fugit odit a repellat atque aspernatur?
+                                        Nihil necessitatibus saepe ut voluptas eaque est distinctio ex minima molestias? Quia consequatur asperiores, porro sequi tempora distinctio numquam molestiae, officiis voluptas consequuntur commodi, eaque unde accusantium hic rerum quis.
+                                    </p>
+                                </div> <!--Rating infos and description-->
+                            </div>
+
+                        </div> <!--END INTRO SECTION-->
+
+                        <div class="w-full lg:w-1/3 order-2 p-6">
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-2xl text-wblack font-rubik">Contact & Infos</h2>
+                                <button @click="infoShow()" class="lg:hidden font-rubik text-wblack border-black border-2 p-2 rounded">
+                                    <i v-if="!isInfo" class="fas fa-chevron-down"></i>
+                                    <i v-if="isInfo" class="fas fa-chevron-up"></i>
+                                </button>
+                            </div> <!--Show hide section-->
+                            
+                            <div :class="isInfo ? 'block' : 'hidden' " class="flex flex-col text-wblack mt-4 lg:block px-6">
+                                <div class="flex items-center mb-3"> 
+                                    <i class=" mr-2 fas fa-phone-alt fa-lg"></i>
+                                    <a title="Cliquer pour appeller" class="font-rubik" href="tel:0770947801">0770947801</a>
+                                </div> <!--phone-->
+                                <div class="flex items-center mb-3"> 
+                                    <i class="mr-2 fas fa-inbox fa-lg"></i>
+                                    <a title="Cliquer pour envoyer un email" class="font-rubik" href="mailto:mahdi@gmail.com">mahdi@werili.com</a>
+                                </div> <!--email-->
+                                <div class="flex items-center mb-3"> 
+                                    <i class="mr-2 fas fa-map-marker-alt fa-lg"></i>
+                                    <p class="font-rubik leading-snug" href="">Cité des annassers 1 bt912 n23, kouba, Alger</p>
+                                </div> <!--adress-->
+                                <div class="flex items-center mb-3"> 
+                                    <i class="mr-2 fas fa-link fa-lg"></i>
+                                    <a target="_blank" class="font-rubik" href="">Lien vers google map ></a>
+                                </div> <!--lien gmaps-->
+                                <div class="flex items-center mb-3"> 
+                                    <i class="mr-2 fa-lg fas fa-globe"></i>
+                                    <a target="_blank" class="font-rubik leading-snug" href="">www.werili.io</a>
+                                </div> <!--website-->
+                                <div class="mt-8 flex items-center">
+                                    <a href="" target="_blank" ><img class="mr-6" src="/img/socialicons/instagram.svg" alt="" width="50px" height="30px"></a>
+                                    <a href="" target="_blank" ><img class="mr-6" src="/img/socialicons/facebook.svg" alt="" width="50px" height="30px"></a>
+                                </div><!--social media-->
+                            </div>
+                        </div> <!--END CONTACT SECTION-->
+
+
+                        <div class="w-full lg:w-2/3 order-3 p-6">
+
+                            <h2 class="text-2xl text-wblack font-rubik">Donnez une note</h2>
+
+                                <form class="flex flex-wrap w-full">
+                                    <div class=" w-full lg:w-1/2 p-6">
+
+                                         <!-- Rating Stars Box -->
+                                            <div class='rating-stars'>
+                                                    <ul id='stars' class="flex items-center justify-around">
+                                                    <li class='star' title='Poor' data-value='1'>
+                                                        <i  class="fas fa-star fa-3x"></i>
+                                                    </li>
+                                                    <li class='star' title='Fair' data-value='2'>
+                                                        <i  class="fas fa-star fa-3x"></i>
+                                                    </li>
+                                                    <li class='star' title='Good' data-value='3'>
+                                                        <i  class="fas fa-star fa-3x"></i>
+                                                    </li>
+                                                    <li class='star' title='Excellent' data-value='4'>
+                                                        <i  class="fas fa-star fa-3x"></i>
+                                                    </li>
+                                                    <li class='star' title='WOW!!!' data-value='5'>
+                                                        <i  class="fas fa-star fa-3x"></i>
+                                                    </li>
+                                                    </ul>
+                                                </div> 
+                                      <input id="vote" type="hidden" value='' >
+                                    </div> <!--stars-->
+
+                                    <div class="w-full lg:w-1/2 p-6">
+                                        <label class="font-rubik text-wblack">Que pensez vous de cette adresse ?</label>
+                                        <textarea class="resize-none w-full mt-2 shadow-shadd rounded focus: outline-none p-2 font-rubik text-wblack" rows="5"></textarea>
+                                        <button class="bg-blue mt-6 rounded-md px-8 py-3 text-white font-rubik float-right">Poster</button> 
+                                    </div><!--Form-->
+                                </form> <!-- ADD A COMMENT-->
+
+                            <h2 class="text-2xl text-wblack font-rubik mb-6">Ce qu'on dit de nous</h2>
+
+                            <div class="cards-section w-full">
+                                <div class="card w-full p-4 shadow-shadd rounded mb-6">
+                                    <div class="flex items-center justify-between w-full mb-4 relative">
+                                        <div class="flex items-center">
+                                            <img class="rounded-full" src="img/socialicons/facebook.svg" alt="" width="60px">
+                                            <div class="flex flex-col ml-6">
+                                                <p>John Doe</p>
+                                                <span>(22 reviews)</span>
+                                            </div>
+                                        </div>
+                                        <button>
+                                            <i class="fas fa-flag fa-lg text-red-600"></i>
+                                        </button> 
+                                    </div><!--top part-->
+                                    <hr>
+                                    <div class="mt-4">
+                                        <div class="flex mb-4">
+                                            <i class="fas fa-star fa-2x mr-2 text-wblack"></i>
+                                            <span class="text-2xl text-wblack">4.5/5</span>
+                                        </div>
+                                        <p class="text-wblack">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque cum, dolor corrupti fuga, magnam.
+                                        </p>
+                                    </div><!--bottom part-->
+
+                                </div> <!--One card-->
+
+                                <div class="card w-full p-4 shadow-shadd rounded mb-6">
+                                        <div class="flex items-center justify-between w-full mb-4 relative">
+                                            <div class="flex items-center">
+                                                <img class="rounded-full" src="img/socialicons/facebook.svg" alt="" width="60px">
+                                                <div class="flex flex-col ml-6">
+                                                    <p>John Doe</p>
+                                                    <span>(22 reviews)</span>
+                                                </div>
+                                            </div>
+                                            <button>
+                                                <i class="fas fa-flag fa-lg text-red-600"></i>
+                                            </button> 
+                                        </div><!--top part-->
+                                        <hr>
+                                        <div class="mt-4">
+                                            <div class="flex mb-4">
+                                                <i class="fas fa-star fa-2x mr-2 text-wblack"></i>
+                                                <span class="text-2xl text-wblack">4.5/5</span>
+                                            </div>
+                                            <p class="text-wblack">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque cum, dolor corrupti fuga, magnam.
+                                            </p>
+                                        </div><!--bottom part-->
+    
+                                    </div> <!--One card-->
+
+                                    <div class="card w-full p-4 shadow-shadd rounded mb-6">
+                                            <div class="flex items-center justify-between w-full mb-4 relative">
+                                                <div class="flex items-center">
+                                                    <img class="rounded-full" src="img/socialicons/facebook.svg" alt="" width="60px">
+                                                    <div class="flex flex-col ml-6">
+                                                        <p>John Doe</p>
+                                                        <span>(22 reviews)</span>
+                                                    </div>
+                                                </div>
+                                                <button>
+                                                    <i class="fas fa-flag fa-lg text-red-600"></i>
+                                                </button> 
+                                            </div><!--top part-->
+                                            <hr>
+                                            <div class="mt-4">
+                                                <div class="flex mb-4">
+                                                    <i class="fas fa-star fa-2x mr-2 text-wblack"></i>
+                                                    <span class="text-2xl text-wblack">4.5/5</span>
+                                                </div>
+                                                <p class="text-wblack">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque cum, dolor corrupti fuga, magnam.
+                                                </p>
+                                            </div><!--bottom part-->
+        
+                                        </div> <!--One card-->
+
+                                        <div class="card w-full p-4 shadow-shadd rounded mb-6">
+                                                <div class="flex items-center justify-between w-full mb-4 relative">
+                                                    <div class="flex items-center">
+                                                        <img class="rounded-full" src="img/socialicons/facebook.svg" alt="" width="60px">
+                                                        <div class="flex flex-col ml-6">
+                                                            <p>John Doe</p>
+                                                            <span>(22 reviews)</span>
+                                                        </div>
+                                                    </div>
+                                                    <button>
+                                                        <i class="fas fa-flag fa-lg text-red-600"></i>
+                                                    </button> 
+                                                </div><!--top part-->
+                                                <hr>
+                                                <div class="mt-4">
+                                                    <div class="flex mb-4">
+                                                        <i class="fas fa-star fa-2x mr-2 text-wblack"></i>
+                                                        <span class="text-2xl text-wblack">4.5/5</span>
+                                                    </div>
+                                                    <p class="text-wblack">
+                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque cum, dolor corrupti fuga, magnam.
+                                                    </p>
+                                                </div><!--bottom part-->
+            
+                                            </div> <!--One card-->
+
+                                            <div class="card w-full p-4 shadow-shadd rounded mb-6 font-rubik">
+                                                    <div class="flex items-center justify-between w-full mb-4 relative">
+                                                        <div class="flex items-center">
+                                                            <img class="rounded-full" src="img/socialicons/facebook.svg" alt="" width="60px">
+                                                            <div class="flex flex-col ml-6">
+                                                                <p>John Doe</p>
+                                                                <span>(22 reviews)</span>
+                                                            </div>
+                                                        </div>
+                                                        <button id="myBtn" class="p-6">
+                                                            <i class="fas fa-flag fa-lg text-red-600"></i>
+                                                        </button>
+                                                    </div><!--top part-->
+                                                    <hr>
+                                                    <div class="mt-4">
+                                                        <div class="flex mb-4">
+                                                            <i class="fas fa-star fa-2x mr-2 text-wblack"></i>
+                                                            <span class="text-2xl text-wblack">4.5/5</span>
+                                                        </div>
+                                                        <p class="text-wblack">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque cum, dolor corrupti fuga, magnam.
+                                                        </p>
+                                                        <div class="pl-8 my-4"> <!--Business reply-->
+                                                            <div class="border-l-4 border-worange px-8">
+                                                                <div class="flex items-center text-grey mb-3">
+                                                                    <i class="fas fa-reply fa-2x mr-3"></i>
+                                                                    <strong> Reponse de pink panther</strong>
+                                                                </div>
+                                                                <p class="text-wblack">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem ipsum impedit laborum quibusdam sed! Hic, consequatur. Culpa architecto, eos dignissimos quisquam temporibus est quis ipsam ut eveniet saepe optio dolore!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--bottom part-->
+                
+                                                </div> <!--One card-->
+                                            <!--Modal card-->
+                                            
+                                                <!-- The Modal -->
+                                                <div id="myModal" class="modal">
+
+                                                        <!-- Modal content -->
+                                                        <div class="modal-content rounded-lg shadow-shadd flex flex-col">
+                                                        <span class="close text-right pr-8">&times;</span>
+                                                        <div class="mx-auto pb-6 px-4 w-full flex flex-col">
+                                                            <p class="font-rubik text-wblack text-2xl mx-auto">Pourquoi voulez-vous signaler ce commentaire ? </p>
+                                                            <form class="mx-auto mt-8 font-rubik" action="">
+                                                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                                                    <label for="vehicle1" class="text-xl"> I have a bike</label><br>
+                                                                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                                                    <label for="vehicle2" class="text-xl"> I have a car</label><br>
+                                                                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                                                    <label for="vehicle3" class="text-xl"> I have a boat</label><br><br>
+                                                                    <input class="bg-red-600 rounded-md px-8 py-3 text-white" type="submit" value="Signler">
+                                                            </form>
+                                                        </div>
+                                                        </div>
+                                                    
+                                                    </div> 
+                                            <!--Modal card ends-->
+                            </div> <!--END CARDS-->
+
+                        </div> <!--END FEEDBACK SECTION-->
+
+                </div>
+                
+            </div>
+            
+        
+        </div> <!--VUE JS CONTAINER DIV-->
+
+            
+            <!--VueJS cdn-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/dist/js/vue.js"></script>
+<script src="/dist/js/jquery.js"></script>
+<script src="/dist/js/starRating.js"></script>
+<script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+</script>
+</body>
+</html>

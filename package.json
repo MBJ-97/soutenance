@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/MBJ-97/frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/MBJ-97/frontend/issues"
+  },
+  "homepage": "https://gitlab.com/MBJ-97/frontend#readme",
+  "dependencies": {
+    "tailwindcss": "^1.9.1"
+  }
+}

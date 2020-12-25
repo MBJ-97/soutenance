@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--stylesheets-->
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">    
+    <title>Home</title>
+</head>
+<body>
+<div id='app'>
+
+    <header class="mt-2 sm:flex sm:justify-between sm:items-center">
+        <div class="flex items-center justify-between px-4 sm:px-0 py-3 md:w-2/3">
+                    <div class=" mx-auto sm:ml-8 flex items-end">
+                        <img class="h-10" src="img/logo.png" alt="werili"> <span class="font-roboto ml-1 mb-1 text-blue">Business</span>
+                    </div>
+                    
+        </div>
+
+    </header>
+
+<div class="container mx-auto mt-16 font-rubik text-wblack">
+    <h1 class=" mb-4 text-3xl">Enregistrez votre business</h1>
+    <p>Enregistrez votre business pour bénéficier d’une visibilitée supplementaire en ligne ainsi que d’avoir la possibilite de recolter le feedback de vos clients. C’est gratuit ! et c’est que du positif !</p>
+
+    <div class="mt-16">
+        <form action="">
+            <div class="mb-16">
+                <h3 class="text-2xl border-b-8 pb-0 border-worange">1. Introduisez votre activité </h3>
+                <div class="px-6 pt-8 flex flex-wrap mb-8">
+                    <div class="w-full mb-10 md:w-1/2 md:pr-4 md:mb-0 flex flex-col">
+                        <label class="mb-4">Nom de votre établissement</label>
+                        <input required data-errormessage-value-missing="Ce champ ne peut pas être vide" name="" placeholder="Expl: Patisseries du jour" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                    </div>
+
+                    <div class="w-full mb-10 md:w-1/2 md:mb-0 flex flex-col">
+                        <label class="mb-4">Description</label>
+                        <textarea data-errormessage-value-missing="Ce champ ne peut pas être vide" required name="" placeholder="Expl: Décrivez votre activité au public " class="outline-none px-4 border-2 border-blue focus:border-worange rounded" rows="5"></textarea>
+                    </div>
+                </div>
+            </div> <!-- END OF STEP  -->
+
+            <div class="mb-16">
+                <h3 class="text-2xl border-b-8 pb-0 border-worange">2. Classification</h3>
+                <div class="px-6 pt-8 flex flex-wrap mb-8">
+                    <div class="w-full mb-10 md:w-1/2 md:pr-4 md:mb-0 flex flex-col">
+                        <label class="mb-4">Catégorie</label>
+                        <select data-errormessage-value-missing="Ce champ ne peut pas être vide" required class="appearance-none outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded">
+                            <option value="" disabled selected>Selectionner</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mb-10 md:w-1/2 md:mb-0 flex flex-col">
+                        <label class="mb-4">Sous-catégorie</label>
+                        <select required data-errormessage-value-missing="Ce champ ne peut pas être vide" class="appearance-none outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded">
+                            <option value="" disabled selected>Selectionner</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div> <!-- END OF STEP  -->
+
+            <div class="mb-16">
+                <h3 class="text-2xl border-b-8 pb-0 border-worange">3. Localisation </h3>
+                <div class="px-6 pt-8 flex flex-wrap mb-8">
+                    <div class="w-full mb-10 md:w-1/2 md:pr-4 md:mb-0 flex flex-col">
+                        <label class="mb-4">Wilaya</label>
+                        <select  required data-errormessage-value-missing="Ce champ ne peut pas être vide" class="appearance-none outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded">
+                            <option value="" disabled selected>Selectionner</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mb-10 md:w-1/2 flex flex-col">
+                        <label class="mb-4">Commune</label>
+                        <select  required data-errormessage-value-missing="Ce champ ne peut pas être vide" class="appearance-none outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded">
+                            <option value="" disabled selected>Selectionner</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mb-10 flex flex-col">
+                        <label class="mb-4">Adresse complète</label>
+                        <input  required data-errormessage-value-missing="Ce champ ne peut pas être vide" placeholder="Expl: Cité des annasers local n5" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                    </div>
+                    <div class="w-full flex flex-col">
+                        <label class="mb-4">Lien google maps</label>
+                        <input placeholder="Collez votre lien vers maps" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                    </div>
+                </div>
+            </div> <!-- END OF STEP  -->
+
+            <div class="mb-16">
+                    <h3 class="text-2xl border-b-8 pb-0 border-worange">4. Contact et réseaux sociaux</h3>
+                    <div class="px-6 pt-8 flex flex-wrap mb-8">
+                        <div class="w-full mb-10 md:w-1/2 md:pr-4 md:mb-0 flex flex-col">
+                            <label class="mb-4">Numéro de téléphone</label>
+                            <input  required data-errormessage-value-missing="Ce champ ne peut pas être vide" placeholder="Votre numéro joignable" class="appearance-none outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="number">
+                        </div>
+    
+                        <div class="w-full mb-10 md:w-1/2 flex flex-col">
+                            <label class="mb-4">Email</label>
+                            <input  required data-errormessage-value-missing="Ce champ ne peut pas être vide" placeholder="Votre email" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="email">
+                        </div>
+    
+                        <div class="w-full md:w-1/2 md:pr-4 mb-10 flex flex-col">
+                            <label class="mb-4">Page Facebook</label>
+                            <input placeholder="Collez le lien qui mène à votre page Facebook" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                        </div>
+
+                        <div class="w-full mb-10 md:w-1/2 flex flex-col">
+                            <label class="mb-4">Page Instagram</label>
+                            <input placeholder="Collez le lien qui mène à votre page Instagram" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                        </div>
+
+                        <div class="w-full md:w-1/2 md:pr-4 flex flex-col">
+                            <label class="mb-4">Votre site web</label>
+                            <input placeholder="Collez votre lien vers votre site web" class="outline-none h-12 px-4 border-2 border-blue focus:border-worange rounded" type="text">
+                        </div>
+                    </div>
+                </div> <!-- END OF STEP  -->
+                <div class="mb-16">
+                    <h3 class="text-2xl border-b-8 pb-0 border-worange">5. Photo de profile</h3>
+                    <div class="px-6 pt-8 flex flex-wrap mb-8">
+                        <div class="w-full mb-10 md:w-1/2 md:pr-4 md:mb-0 flex flex-col">
+                            <label class="mb-4">Photo de profile (format carré)</label>
+                            <input required data-errormessage-value-missing="Ce champ ne" class="outline-none flex items-center h-12 px-4 border-2 border-blue focus:border-worange rounded" type="file">
+                        </div>
+                    </div>
+                </div> <!-- END OF STEP  -->
+
+                <input class="bg-blue rounded-md px-20 py-4 text-white text-xl block mx-auto my-20 cursor-pointer" value="Continuer" type="submit">  <!-- Submit button-->
+    
+
+            
+        </form>
+        
+    </div> <!--Form-->
+</div>
+
+</div> <!--END VUEJS-->
+
+<!--VueJS cdn-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/dist/js/vue.js"></script>
+</body>
+</html>
