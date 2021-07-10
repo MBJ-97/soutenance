@@ -19,7 +19,9 @@
     <header class="mt-2 sm:flex sm:justify-between sm:items-center">
         <div class="flex items-center justify-between px-4 sm:px-0 py-3 md:w-1/3">
                     <div class=" mx-auto sm:ml-8">
-                        <img class="h-10" src="img/logo.png" alt="werili">
+                        <a href="/homepage.html">
+                            <img class="h-10" src="img/logo.png" alt="werili">
+                        </a>
                     </div>
                     <div class="sm:hidden">
                         <button @click="isOpen = !isOpen" type="button" class="block text-blue">
@@ -30,7 +32,7 @@
         </div>
                             <div :class="isOpen ? 'block' : 'hidden' " class="px-6 py-3 sm:flex sm:items-center sm:mt-4 sm:w-1/3 mx-auto">
                                 <div class="mx-auto text-center sm:flex">
-                                    <a class="text-wblack pb-2 block font-medium font-rubik" href="">Catégories</a>
+                                    <a class="text-wblack pb-2 block font-medium font-rubik" href="/categories.html">Catégories</a>
                                     <a class="text-wblack mt-1 pb-2 block font-medium font-rubik sm:mt-0 sm:ml-4" href="">Business</a>
                                     <a class="text-wblack mt-1 pb-2 block font-medium font-rubik sm:mt-0 sm:ml-4" href="">About</a>
                                 </div>
@@ -39,59 +41,45 @@
                         
                                  
                                 <div :class="isOpen ? 'block' : 'hidden' " class="py-3 sm:flex sm:items-center sm:mt-2 mx-auto sm:mr-0 sm:w-1/3">
-<!--hna relta f iphone 6 paysage view--><button class="sm:mt-0 mt-6 bg-blue rounded-md px-8 py-3 text-white block font-rubik mx-auto sm:mr-8">Login</button> 
+<!--hna relta f iphone 6 paysage view--><button class="sm:mt-0 mt-6 bg-blue rounded-md px-8 py-3 text-white block font-rubik mx-auto sm:mr-8"> <a href="/login.html">Login</a> </button>
                                 </div>          
     </header>
-`
+
 
     <div class="container h-screen mx-auto mt-20">
         <div class="px-2">
             <div class="flex flex-wrap -mx-2">
+                        
                         <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
-                            <div class="bg-blue relative hover:text-white text-white">
-                                <a href="www.google.com">
-                                <p class="absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
-                                <img class="opacity-50 hover:opacity-0 rounded" src="img/cat/doctor.jpg" alt="">
+                            <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
+                                <a href="/list.html">
+                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
+                                <img class="opacity-50 rounded" src="img/cat/cafe.jpg" alt="">
+                                </a>
+                            </div>
+                        </div> <!-- END CARD -->
+
+                        <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
+                            <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
+                                <a href="/list.html">
+                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Artisanat</p>
+                                <img class="opacity-50 rounded" src="img/cat/arti.jpg" alt="">
                                 </a>
                             </div>
                         </div> <!-- END CARD -->
                         <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
                             <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
-                                <a href="www.google.com">
-                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
+                                <a href="/list.html">
+                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Santé</p>
                                 <img class="opacity-50 rounded" src="img/cat/doctor.jpg" alt="">
                                 </a>
                             </div>
                         </div> <!-- END CARD -->
                         <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
                             <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
-                                <a href="www.google.com">
-                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
-                                <img class="opacity-50 rounded" src="img/cat/doctor.jpg" alt="">
-                                </a>
-                            </div>
-                        </div> <!-- END CARD -->
-                        <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
-                            <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
-                                <a href="www.google.com">
-                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
-                                <img class="opacity-50 rounded" src="img/cat/doctor.jpg" alt="">
-                                </a>
-                            </div>
-                        </div> <!-- END CARD -->
-                        <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
-                            <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
-                                <a href="www.google.com">
-                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
-                                <img class="opacity-50 rounded" src="img/cat/doctor.jpg" alt="">
-                                </a>
-                            </div>
-                        </div> <!-- END CARD -->
-                        <div class="w-full  sm:w-1/2 md:w-1/3 lg:w-1/4 py-4 px-4">
-                            <div class="bg-blue relative hover:bg-worange hover:text-black text-white">
-                                <a href="www.google.com">
-                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Cafés & Restaurents</p>
-                                <img class="opacity-50 rounded" src="img/cat/doctor.jpg" alt="">
+                                <a href="/list.html">
+                                <p class=" absolute z-50 text-2xl font-rubik top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">Animaux</p>
+                                <img class="opacity-50 rounded" src="img/cat/cat.jpg" alt="">
                                 </a>
                             </div>
                         </div> <!-- END CARD -->

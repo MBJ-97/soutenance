@@ -28,6 +28,10 @@ module.exports = {
     },
 
     extend: {
+
+      lineHeight : {
+        '20': '5rem' 
+      },
  
       colors: {
         worange: '#FDC094',
